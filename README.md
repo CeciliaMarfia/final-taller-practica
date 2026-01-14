@@ -1,4 +1,3 @@
-# final-taller-practica
 # 📘 Taller de Programación – Material de Estudio Final
 
 Este espacio contiene **material práctico de estudio** para preparar el **final de Taller de Programación**.
