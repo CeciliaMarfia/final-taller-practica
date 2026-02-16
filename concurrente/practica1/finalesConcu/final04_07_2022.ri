@@ -1,0 +1,57 @@
+programa final04_07_2022
+procesos
+  proceso proceso1
+  comenzar
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+  fin
+
+areas
+  areaEtapa1y2: AreaPC(5,5,7,7)
+  areaEtapa3: AreaP(10,10,10,10)
+  areaFiscalizador: AreaP(1,1,1,1)
+  areaInicio1: AreaP(5,4,5,4)
+  areaInicio2: AreaP(6,4,6,4)
+  areaInicio3: AreaP(7,4,7,4)
+
+robots
+  robot jugador
+  variables
+    av:numero
+  comenzar
+    av:=PosAv
+  fin
+
+  robot fiscalizador
+  variables
+    av:numero
+  comenzar
+    av:=PosAv
+  fin
+
+variables
+  jugador1: jugador
+  jugador2: jugador
+  jugador3: jugador
+
+  jefe: fiscalizador
+comenzar
+  AsignarArea(jugador1,areaInicio1)
+  AsignarArea(jugador2,areaInicio2)
+  AsignarArea(jugador3,areaInicio3)
+  
+  AsignarArea(jugador1,areaEtapa1y2)
+  AsignarArea(jugador2,areaEtapa1y2)
+  AsignarArea(jugador3,areaEtapa1y2)
+  
+  AsignarArea(jugador1,areaEtapa3)
+  AsignarArea(jugador2,areaEtapa3)
+  AsignarArea(jugador3,areaEtapa3)
+  AsignarArea(jefe,areaFiscalizador)
+  
+
+  Iniciar(jugador1,5,4)
+  Iniciar(jugador2,6,4)
+  Iniciar(jugador3,7,4)
+  Iniciar(jefe,1,1)
+fin

@@ -1,0 +1,85 @@
+{4) Realice un programa en el que dos robots se encargan de limpiar las ciudad. La ciudad se dividió en 4 áreas: las impares (1 y 3) deben limpiarse de flores; y las pares (2 y 4) deben limpiarse de papeles. Un robot debe encargarse de las áreas impares y otro robot de las pares. Modularice el recorrido de cada área
+- - - -
+Área 1: desde la avenida 1 hasta la avenida 25 Área 2: desde la avenida 26 hasta la avenida 50 Área 3: desde la avenida 51 hasta la avenida 75 Área 4: desde la avenida 76 hasta la avenida 100}
+
+programa ejercicio04
+procesos
+   {JUNTA TODAS LAS FLORES DE UNA ESQUINA}
+  proceso juntarFlores
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+  fin
+    {JUNTA TODOS LOS PAPELES DE UNA ESQUINA}
+  proceso juntarPapeles
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+  fin
+
+  proceso recorrerAvenidaFlores
+  comenzar
+    repetir 2
+      repetir 99
+        juntarFlores
+        mover
+      juntarFlores
+      derecha
+      repetir 24
+        juntarFlores
+        mover
+      juntarFlores
+      derecha
+  fin
+
+  proceso recorrerAvenidaPapeles
+  comenzar
+    repetir 2
+      repetir 99
+        juntarPapeles
+        mover
+      juntarPapeles
+      derecha
+      repetir 24
+        juntarPapeles
+        mover
+      juntarPapeles
+      derecha
+  fin
+
+
+areas
+  area1: AreaP (1,1,25,100)
+  area2: AreaP (26,1,50,100)
+  area3: AreaP (51,1,75,100)
+  area4: AreaP (76,1,100,100)
+robots
+  robot tipo1
+  variables
+    av:numero
+  comenzar
+    av:= PosAv
+    recorrerAvenidaFlores
+    Pos(av+1,1)
+    
+  fin
+
+  robot tipo2
+  variables
+    av:numero
+  comenzar
+    av:= PosAv
+    recorrerAvenidaPapeles
+    Pos(av+1,1)
+  fin
+variables
+  rFlorero: tipo1
+  rPapelero: tipo2
+comenzar
+  AsignarArea(rFlorero, area1)
+  AsignarArea(rFlorero, area3)
+  AsignarArea(rPapelero, area2)
+  AsignarArea(rPapelero, area4)
+  Iniciar(rFlorero, 1,1)
+  Iniciar(rPapelero, 26,1)
+fin
