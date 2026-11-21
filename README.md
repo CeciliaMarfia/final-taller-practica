@@ -1,9 +1,17 @@
-# 📘 Taller de Programación – Material de Estudio Final
+# Taller de Programación: práctica para el final
 
-Este espacio contiene **material práctico de estudio** para preparar el **final de Taller de Programación**.
+Ejercicios resueltos en Pascal y R-Info para preparar el final de Taller de Programación (Facultad de Informática, UNLP).
 
-Durante la cursada se trabajan los **tres módulos de la materia**:
+## Estructura
 
-- 🔹 **Programación Imperativa**
-- 🔹 **Programación Orientada a Objetos (POO)**
-- 🔹 **Programación Concurrente**
+- `imperativo/`: prácticas 0 a 5 y ejercicios de finales del módulo imperativo (Pascal).
+- `concurrente/`: práctica del módulo concurrente (R-Info).
+
+## Temas
+
+- Programación imperativa: árboles, ordenación, búsqueda y merge
+- Programación concurrente: procesos, comunicación y sincronización
+
+---
+
+Las resoluciones son propias y pueden tener errores. El material de cátedra (diapositivas, enunciados y parciales) pertenece a sus docentes y está incluido solo como referencia de estudio.
